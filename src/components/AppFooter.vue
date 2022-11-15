@@ -84,6 +84,9 @@ export default {
         </div>
       </div>
       <div class="right">
+        <div class="img-box">
+          <img src="../img/dc-logo-bg.png" alt="dc-logo">
+        </div>
       </div>
     </div>
     
@@ -119,11 +122,12 @@ footer{
   width: 70%;
   height: 100%;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
 }
 .left{
   padding-top: 40px;
   display: flex;
-  // flex-direction: r;
   flex-wrap: wrap;
   h3{
     color: white;
@@ -139,6 +143,20 @@ li{
   a{
     text-decoration: none;
     color: #959595;
+  }
+}
+.right{
+  width: 40%;
+  .img-box{
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    img{
+      position: absolute;
+      width: 100%;
+      top: -20%;
+  }
   }
 }
 </style>
