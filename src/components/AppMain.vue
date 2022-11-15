@@ -8,21 +8,23 @@ export default {
 
 <template>
 <main>
-  <div class="content">
-    CONTENT HERE
+  <div class="container">
+
+      CONTENT HERE
   </div>
-  <AppSection/>
 </main>
 </template>
 
 
 <style lang="scss" scoped>
 main{
-  height: 290px;
-  .content{
-    height: 130px;
+  height: 130px;
     background-color: #1c1c1c;
     color: white;
-  }
+}
+.container{
+  width: 70%;
+  height: 100%;
+  margin: 0 auto;
 }
 </style>
