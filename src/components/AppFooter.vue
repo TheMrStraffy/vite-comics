@@ -93,8 +93,17 @@ export default {
   </div>
   <div class="bottom-footer">
     <div class="container">
+      <button>SIGN-UP NOW!</button>
 
-    BOTTOM FOOTER
+      <div class="socials">
+        <span>FOLLOW US</span>
+        <img src="../img/footer-facebook.png" alt="">
+        <img src="../img/footer-periscope.png" alt="">
+        <img src="../img/footer-pinterest.png" alt="">
+        <img src="../img/footer-twitter.png" alt="">
+        <img src="../img/footer-youtube.png" alt="">
+      </div>
+    
     </div>
   </div>
 
@@ -116,6 +125,9 @@ footer{
   .bottom-footer{
     height: 110px;
     background-color: #303030;
+    .container{
+      align-items: center;
+    }
   }
 }
 .container{
@@ -157,6 +169,19 @@ li{
       width: 100%;
       top: -20%;
   }
+  }
+}
+button{
+  height: 50px;
+  padding: 10px;
+  color: white;
+  background-color: #303030;
+  border-color:#0282f9;
+}
+.socials{
+
+  span{
+    color: #0282f9;
   }
 }
 </style>
