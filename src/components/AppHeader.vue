@@ -62,7 +62,7 @@ export default {
 
 <template>
 <header>
-  <div class="container-mc">
+  <div class="container d-flex justify-content-between align-items-center h-100">
 
   <div class="logo">
     <img src="/dc-logo.png" alt="dc-logo">
@@ -88,14 +88,14 @@ export default {
 header{
   height: 120px;
   background-color: white;
-  .container-mc{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 70%;
-    height: 100%;
-    margin: 0 auto;
-  }
+  // .container-mc{
+  //   display: flex;
+  //   justify-content: space-between;
+  //   align-items: center;
+  //   width: 70%;
+  //   height: 100%;
+  //   margin: 0 auto;
+  // }
 }
 img{
   width: 80px;

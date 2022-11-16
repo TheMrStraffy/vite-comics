@@ -1,16 +1,25 @@
 <script>
-import AppSection from './AppSection.vue'
+import AppCardVue from './AppCard.vue'
+import catalogue from '../data/catalogue'
 export default {
-  components: { AppSection },
-  name:"AppMain"
+  components: {AppCardVue},
+  name:"AppMain",
+  data(){
+    return{
+      catalogue
+    }
+  }
 }
 </script>
 
 <template>
 <main>
-  <div class="container">
-
-      CONTENT HERE
+  <div class="container d-flex ">
+    <div class="row m-auto justify-content-evenly">
+      <AppCardVue 
+      v-for="(item, index) in catalogue" :key="index" :comic="item"/>
+     
+    </div>
   </div>
 </main>
 </template>
@@ -19,13 +28,9 @@ export default {
 <style lang="scss" scoped>
 
 main{
-  height: 130px;
+  padding: 50px 0;
     background-color: #1c1c1c;
     color: white;
 }
-// .container{
-//   width: 70%;
-//   height: 100%;
-//   margin: 0 auto;
-// }
+
 </style>
