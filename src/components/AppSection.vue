@@ -75,8 +75,7 @@ section{
   justify-content: space-evenly;
   width: calc(100% / 5);
   img{
-    // width: 50%;
-    height: 30%;
+    height: 40%;
     
   }
 }

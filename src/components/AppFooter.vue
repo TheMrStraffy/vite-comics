@@ -46,25 +46,25 @@ export default {
   <div class="top-footer">
     <div class="container">
       <div class="left">
-        <div class="column">
-          <h3>DC COMICS</h3>
-          <ul>
+        <div class="column-mc">
+          <h5>DC COMICS</h5>
+          <ul class="p-0">
             <li
             v-for="(link,index) in dcComicList"
             :key="index"
             ><a :href="link.link">{{link.text}}</a></li>
           </ul>
-          <h3>SHOP</h3>
-          <ul>
+          <h5>SHOP</h5>
+          <ul class="p-0">
             <li
             v-for="(link,index) in shopList"
             :key="index"
             ><a :href="link.link">{{link.text}}</a></li>
           </ul>
         </div>
-        <div class="column">
-          <h3>DC</h3>
-          <ul>
+        <div class="column-mc">
+          <h5>DC</h5>
+          <ul class="p-0">
             <li
             v-for="(link,index) in dcList"
             :key="index"
@@ -72,20 +72,15 @@ export default {
           </ul>
           
         </div>
-        <div class="column">
-          <h3>SITES</h3>
-          <ul>
+        <div class="column-mc">
+          <h5>SITES</h5>
+          <ul class="p-0">
             <li
             v-for="(link,index) in sitesList"
             :key="index"
             ><a :href="link.link">{{link.text}}</a></li>
           </ul>
           
-        </div>
-      </div>
-      <div class="right">
-        <div class="img-box">
-          <img src="../img/dc-logo-bg.png" alt="dc-logo">
         </div>
       </div>
     </div>
@@ -120,6 +115,12 @@ footer{
     background-repeat: no-repeat;
     background-position: 50% 50%;
     height: 370px;
+    .container{
+      background-image: url('../img/dc-logo-bg.png');
+      background-repeat: no-repeat;
+      position: relative;
+      background-position: right;
+    }
   }
    
   .bottom-footer{
@@ -138,14 +139,14 @@ footer{
   justify-content: space-between;
 }
 .left{
-  padding-top: 40px;
+  padding-top: 20px;
   display: flex;
   flex-wrap: wrap;
-  h3{
+  h5{
     color: white;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
   }
-  .column{
+  .column-mc{
     margin-right: 25px;
   }
 }
@@ -160,14 +161,15 @@ li{
 .right{
   width: 40%;
   .img-box{
-      position: relative;
+      // position: relative;
       width: 100%;
       height: 100%;
       overflow: hidden;
     img{
-      position: absolute;
+      // position: absolute;
       width: 100%;
-      top: -20%;
+      height: 100%;
+      // top: -20%;
   }
   }
 }

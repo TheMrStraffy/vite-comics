@@ -17,14 +17,15 @@ export default {
 
 
 <style lang="scss" scoped>
+
 main{
   height: 130px;
     background-color: #1c1c1c;
     color: white;
 }
-.container{
-  width: 70%;
-  height: 100%;
-  margin: 0 auto;
-}
+// .container{
+//   width: 70%;
+//   height: 100%;
+//   margin: 0 auto;
+// }
 </style>
