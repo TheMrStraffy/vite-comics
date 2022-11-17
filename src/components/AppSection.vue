@@ -1,36 +1,10 @@
 <script>
+import imageDB from '../data/imageDB';
 export default {
   name:"AppSection",
   data(){
     return{
-
-      images:[
-        {
-          img: 'buy-comics-digital-comics.png',
-          text: 'digital comics',
-          link: '#'
-        },
-        {
-          img: 'buy-comics-merchandise.png',
-          text: 'dc merchandise',
-          link: '#'
-        },
-        {
-          img: 'buy-comics-subscriptions.png',
-          text: 'subscription',
-          link: '#'
-        },
-        {
-          img: 'buy-comics-shop-locator.png',
-          text: 'comic shop locator',
-          link: '#'
-        },
-        {
-          img: 'buy-dc-power-visa.svg',
-          text: 'dc power visa',
-          link: '#'
-        },
-      ]
+      imageDB
     }
   },
   methods:{
@@ -43,14 +17,16 @@ export default {
 
 <template>
 <section>
-  <div class="container">
-    <div
-    v-for="(image,index) in images"
-    :key="index"
-     class="buyInfos">
-      <img :src="getPathImage(image.img)" alt="">
-      <a :href="`${image.link}`">{{image.text.toUpperCase()}}</a>
-      
+  <div class="container py-5">
+    <div class="row justify-content-between align-items-center">
+
+      <div
+        v-for="(image,index) in imageDB.images"
+        :key="index"
+        class="buyInfos col-lg-2 d-flex align-items-center justify-content-center">
+        <img :src="getPathImage(image.img)" alt="">
+        <a :href="`${image.link}`">{{image.text.toUpperCase()}}</a>
+      </div>
     </div>
   </div>
 </section>
@@ -58,30 +34,18 @@ export default {
 
 
 <style lang="scss" scoped>
-section{
-  height: 190px;
+section{ 
   background-color: #0282f9;
 }
-.container{
-  width: 70%;
-  height: 100%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-evenly;
-}
 .buyInfos{
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  width: calc(100% / 5);
-  img{
-    height: 40%;
-    
-  }
+  padding: 20px 0;
+}
+img{
+  height: 100px;
 }
 a{
+  margin-left: 5px;
   text-decoration: none;
   color: white;
-
 }
 </style>

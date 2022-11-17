@@ -1,41 +1,10 @@
 <script>
+import footerMenuList from '../data/footerMenuList';
 export default {
   name:"AppFooter",
   data(){
     return{
-      dcComicList: [
-        { text: 'Characters', link: '#' },
-        { text: 'Comics', link: '#' },
-        { text: 'Movies', link: '#' },
-        { text: 'TV', link: '#' },
-        { text: 'Games', link: '#' },
-        { text: 'Videos', link: '#' },
-        { text: 'News', link: '#' },
-      ],
-      shopList: [
-        {text: 'Shop DC', link: '#'},
-        {text: 'Shop DC Collectibles', link: '#'},
-      ],
-      dcList: [
-        { text: 'Terms Of Use', link: '#' },
-        { text: 'Privacy policy(New)', link: '#' },
-        { text: 'Ad Choices', link: '#' },
-        { text: 'Advertising', link: '#' },
-        { text: 'Jobs', link: '#' },
-        { text: 'Subscriptions', link: '#' },
-        { text: 'Talent Workshops', link: '#' },
-        { text: 'CPSC Certificates', link: '#' },
-        { text: 'Ratings', link: '#' },
-        { text: 'Shop Help', link: '#' },
-        { text: 'Contact Us', link: '#' },
-      ],
-      sitesList: [
-        {text: 'DC', link: '#'},
-        {text: 'MAD Magazine', link: '#'},
-        {text: 'DC Kids', link: '#'},
-        {text: 'DC Universe', link: '#'},
-        {text: 'DC Power Visa', link: '#'},
-      ]
+      footerMenuList
     }
   }
 }
@@ -50,14 +19,14 @@ export default {
           <h5>DC COMICS</h5>
           <ul class="p-0">
             <li
-            v-for="(link,index) in dcComicList"
+            v-for="(link,index) in footerMenuList.dcComicList"
             :key="index"
             ><a :href="link.link">{{link.text}}</a></li>
           </ul>
           <h5>SHOP</h5>
           <ul class="p-0">
             <li
-            v-for="(link,index) in shopList"
+            v-for="(link,index) in footerMenuList.shopList"
             :key="index"
             ><a :href="link.link">{{link.text}}</a></li>
           </ul>
@@ -66,7 +35,7 @@ export default {
           <h5>DC</h5>
           <ul class="p-0">
             <li
-            v-for="(link,index) in dcList"
+            v-for="(link,index) in footerMenuList.dcList"
             :key="index"
             ><a :href="link.link">{{link.text}}</a></li>
           </ul>
@@ -76,7 +45,7 @@ export default {
           <h5>SITES</h5>
           <ul class="p-0">
             <li
-            v-for="(link,index) in sitesList"
+            v-for="(link,index) in footerMenuList.sitesList"
             :key="index"
             ><a :href="link.link">{{link.text}}</a></li>
           </ul>
@@ -108,13 +77,13 @@ export default {
 
 <style lang="scss" scoped>
 footer{
-  height: 480px;
+  // height: 480px;
   .top-footer{
     background-image: url('../img/footer-bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    height: 370px;
+    // height: 370px;
     .container{
       background-image: url('../img/dc-logo-bg.png');
       background-repeat: no-repeat;
@@ -131,13 +100,13 @@ footer{
     }
   }
 }
-.container{
-  width: 70%;
-  height: 100%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-}
+// .container{
+//   width: 70%;
+//   height: 100%;
+//   margin: 0 auto;
+//   display: flex;
+//   justify-content: space-between;
+// }
 .left{
   padding-top: 20px;
   display: flex;

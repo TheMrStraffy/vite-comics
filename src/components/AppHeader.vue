@@ -88,14 +88,6 @@ export default {
 header{
   height: 120px;
   background-color: white;
-  // .container-mc{
-  //   display: flex;
-  //   justify-content: space-between;
-  //   align-items: center;
-  //   width: 70%;
-  //   height: 100%;
-  //   margin: 0 auto;
-  // }
 }
 img{
   width: 80px;
@@ -106,10 +98,12 @@ nav{
 ul{
   display: flex;
   align-items: center;
+  // flex-wrap: wrap;
   height: 100%;
   li{
     list-style-type: none;
     padding: 0px 10px;
+    width: 100%;
     height: 100%;
     a{
       display: flex;
